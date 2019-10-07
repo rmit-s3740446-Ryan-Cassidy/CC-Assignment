@@ -8,11 +8,11 @@ error_reporting(E_ALL);?>
 <?php
 
   /* Connect to MySQL and select the database. */
-  $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'DB_USERNAME', 'DB_PASSWORD', 'DB_DEFAULT_PORT');
+  $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
 
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
-  $database = mysqli_select_db($connection, 'DB_DATABASE');
+  $database = mysqli_select_db($connection, 'gtfs');
 
  
 ?>
