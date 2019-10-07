@@ -54,6 +54,12 @@ while($query_data = mysqli_fetch_row($result)) {
   echo "<tr>";
   echo "<td>",$query_data[0], "</td>";
   echo "</tr>";
+   echo "<tr>";
+  echo "<td>",$query_data[1], "</td>";
+  echo "</tr>";
+    echo "<tr>";
+  echo "<td>",$query_data[2], "</td>";
+  echo "</tr>";
 }
 ?>
 
