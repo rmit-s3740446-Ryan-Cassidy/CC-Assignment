@@ -8,7 +8,7 @@ error_reporting(E_ALL);?>
 <?php
 
   /* Connect to MySQL and select the database. */
-  $connection = mysqli_connect('DB_SERVER', 'DB_USERNAME', 'DB_PASSWORD');
+  $connection = mysqli_connect('DB_SERVER', 'DB_USERNAME', 'DB_PASSWORD', 'DB_DEFAULT_PORT');
 
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 
