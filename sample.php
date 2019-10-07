@@ -1,5 +1,7 @@
 
-<?php include "../inc/dbinfo.inc"; ?>
+<?php include "../inc/dbinfo.inc";
+ini_set('display_errors',1);
+error_reporting(E_ALL);?>
 <html>
 <body>
 <h1>Sample page</h1>
