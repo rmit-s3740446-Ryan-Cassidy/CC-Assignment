@@ -63,8 +63,9 @@ while($query_data = mysqli_fetch_array($result)) {
     var coords = [-37.8183431013018, 144.952513264004]; // the geographic center of our map
     var zoomLevel = 13; // the map scale. See: http://wiki.openstreetmap.org/wiki/Zoom_levels
     var map = L.map('map').setView(coords, zoomLevel);
-    var latlngs = [JSON.parse('<?php echo json_encode($coords); ?>')];
+    var latlngs = JSON.parse('<?php echo json_encode($coords); ?>');
 		  window.alert(latlngs[0]);
+		  window.alert(latlngs[1]);
     
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
