@@ -56,7 +56,8 @@ while($query_data = mysqli_fetch_array($result)) {
   $latlon[] = (float)$query_data['lon'];
   $coords[] = $latlon;
 }
-	echo $coords[5];
+	echo $coords[5][0];
+	  echo $coords[5][1];
 	  echo count($coords);  ?>
 	 
     <div id="map" style="width:800px; height: 500px;"></div>
