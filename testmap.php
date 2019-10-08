@@ -1,17 +1,5 @@
 <?php ini_set('display_errors',1);
 error_reporting(E_ALL); ?>
-	 <?php  
-	   /* Connect to MySQL and select the database. */
-  $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
-  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  $database = mysqli_select_db($connection, 'gtfs');
-  $coords;
-  $result = mysqli_query($connection, "SELECT * FROM coords");
-while($query_data = mysqli_fetch_row($result)) {
-  $latlon = array($query_data[0], $querydata[1]);
-  $coords = $latlon;
-}?>
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -56,6 +44,17 @@ while($query_data = mysqli_fetch_row($result)) {
   </nav>
   </head>
   <body>
+	 <?php  
+	   /* Connect to MySQL and select the database. */
+  $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
+  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  $database = mysqli_select_db($connection, 'gtfs');
+  $coords;
+  $result = mysqli_query($connection, "SELECT * FROM coords");
+while($query_data = mysqli_fetch_row($result)) {
+  $latlon = array($query_data[0], $querydata[1]);
+  $coords = $latlon;
+}?>
 	 
     <div id="map" style="width:800px; height: 500px;"></div>
 	  <script>
