@@ -63,7 +63,7 @@ while($query_data = mysqli_fetch_row($result)) {
     var map = L.map('map').setView(coords, zoomLevel);
     var latlngs = <?php echo json_encode($coords); ?>;
     window.alert(latlngs[0] + latlngs[1]);
-    var latlong = [[latlngs[0], latlngs[1]], [latlngs[2], latlngs[3]], [latlngs[4], latlngs[5]]];
+    var latlong = [[-37.8183431013018, 144.952513264004], [-37.8163786584117, 144.950965816403], [-37.5666844210655, 144.745776043124]];
     
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
