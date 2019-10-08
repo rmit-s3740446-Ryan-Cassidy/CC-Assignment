@@ -52,10 +52,10 @@ error_reporting(E_ALL); ?>
   $coords = array();
   $result = mysqli_query($connection, "SELECT * FROM coords");
 while($query_data = mysqli_fetch_array($result)) {
-  $latlon = array((float)$query_data[0], (float)$query_data[1]);
+  $latlon = array((float)$query_data['lat'], (float)$query_data['lon']);
   $coords = $latlon;
 }
-	  ?>
+	echo count($coords)  ?>
 	 
     <div id="map" style="width:800px; height: 500px;"></div>
 	  <script>
