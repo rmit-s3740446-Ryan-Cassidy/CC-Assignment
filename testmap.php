@@ -52,9 +52,8 @@ error_reporting(E_ALL); ?>
   $coords = array();
   $result = mysqli_query($connection, "SELECT * FROM coords");
 while($query_data = mysqli_fetch_array($result)) {
-	echo $query_data['lat'];
-  $latlon = array((float)$query_data['lat'], (float)$query_data['lon']);
-  $coords = $latlon;
+  $latlon[] = (float)$query_data['lat'], (float)$query_data['lon'];
+  $coords[] = $latlon;
 }
 	echo count($query_data)  ?>
 	 
