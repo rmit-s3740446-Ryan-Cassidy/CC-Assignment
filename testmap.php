@@ -52,7 +52,7 @@ error_reporting(E_ALL); ?>
   $coords;
   $result = mysqli_query($connection, "SELECT * FROM coords");
 while($query_data = mysqli_fetch_row($result)) {
-  $latlon = array($query_data[0], $querydata[1]);
+  $latlon = array($query_data[0], $query_data[1]);
   $coords = $latlon;
 }?>
 	 
