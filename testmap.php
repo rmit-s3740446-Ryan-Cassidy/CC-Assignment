@@ -64,8 +64,7 @@ while($query_data = mysqli_fetch_array($result)) {
     var zoomLevel = 13; // the map scale. See: http://wiki.openstreetmap.org/wiki/Zoom_levels
     var map = L.map('map').setView(coords, zoomLevel);
     var latlngs = JSON.parse('<?php echo json_encode($coords); ?>');
-		  window.alert(latlngs[0]);
-		  window.alert(latlngs[1]);
+		  var latlong =[latlngs[0], latlngs[1], latlngs[2]];
     
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -73,7 +72,7 @@ while($query_data = mysqli_fetch_array($result)) {
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1IjoiaGVyYXN5IiwiYSI6ImNrMWcwbG9xNzB6azUzbW1tZ3drbTdxc2YifQ.IDi32Sz2mSNS1VlrvL21pQ'
 }).addTo(map);
-		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+		  var polyline = L.polyline(latlong, {color: 'red'}).addTo(map);
 	  </script>
   </body>
 </html>
