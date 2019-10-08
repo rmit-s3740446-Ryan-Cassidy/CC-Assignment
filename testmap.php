@@ -25,12 +25,12 @@ error_reporting(E_ALL); ?>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Stats
+            <a class="nav-link" href="index.php">Stats
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="testmap.html">Map</a>
+            <a class="nav-link" href="testmap.php">Map</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Services</a>
