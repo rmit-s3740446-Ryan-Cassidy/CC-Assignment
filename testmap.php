@@ -69,8 +69,7 @@ while($query_data = mysqli_fetch_row($result)) {
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1IjoiaGVyYXN5IiwiYSI6ImNrMWcwbG9xNzB6azUzbW1tZ3drbTdxc2YifQ.IDi32Sz2mSNS1VlrvL21pQ'
 }).addTo(map);
-		  var polyline = L.polyline(latlngs, {color: 'red'});
-		  map.addLayer(polyline);
+		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 	  </script>
   </body>
 </html>
