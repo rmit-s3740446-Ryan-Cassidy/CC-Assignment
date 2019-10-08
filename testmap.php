@@ -49,10 +49,10 @@ error_reporting(E_ALL); ?>
   $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
   $database = mysqli_select_db($connection, 'gtfs');
-  $coords;
+  $coords = array();
   $result = mysqli_query($connection, "SELECT * FROM coords");
 while($query_data = mysqli_fetch_row($result)) {
-  $latlon = array($query_data[0], $query_data[1]);
+  $latlon = array((float)$query_data[0], (float)$query_data[1]);
   $coords = $latlon;
 }?>
 	 
