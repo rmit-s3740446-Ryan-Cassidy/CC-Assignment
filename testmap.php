@@ -51,7 +51,8 @@ error_reporting(E_ALL); ?>
   $database = mysqli_select_db($connection, 'gtfs');
   $coords = array();
   $result = mysqli_query($connection, "SELECT * FROM coords");
-while($query_data = mysqli_fetch_assoc($result)) {
+while($query_data = mysqli_fetch_array($result)) {
+	echo $query_data['lat'];
   $latlon = array((float)$query_data['lat'], (float)$query_data['lon']);
   $coords = $latlon;
 }
