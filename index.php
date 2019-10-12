@@ -23,7 +23,7 @@ else
     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
     echo "Stored in: " . $_FILES["file"]["tmp_name"];
 }
-}
+
 
 try {
     // You may need to change the region. It will say in the URL when the bucket is open
@@ -59,6 +59,7 @@ try {
     die('Error:' . $e->getMessage());
 } catch (Exception $e) {
     die('Error:' . $e->getMessage());
+}
 }
 ?>
 <html lang="en">
