@@ -8,8 +8,8 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucketName = 'ccptvapp';
-$IAM_KEY = 'AKIAWF2GCE4OZYJEWXG7';
-$IAM_SECRET = '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';
+$IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
+$IAM_SECRET = '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';
 if (isset($_POST["submit"])) {
     
 if ($_FILES["file"]["error"] > 0)
