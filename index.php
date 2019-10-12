@@ -44,9 +44,13 @@ try {
     die("Error: " . $e->getMessage());
 }
 
+// For this, I would generate a unqiue random string for the key name. But you can do whatever.
+$keyName = 'key/' . basename($_FILES['file']['tmp_name']);
+$pathInS3 = 'https://s3.ap-southeast-2.amazonaws.com/' . $bucketName . '/' . $keyName;
+
 try {
     // Uploaded:
-    $file = $_FILES["fileToUpload"]['tmp_name'];
+    $file = $_FILES['file']['tmp_name'];
     $s3->putObject(
         array(
             'Bucket'=>$bucketName,
