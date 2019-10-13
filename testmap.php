@@ -45,11 +45,12 @@ error_reporting(E_ALL); ?>
   </head>
   <body>
 	  <!-- added -->
- <p id="demo" onclick="myFunction()">Click me.</p>
+ <p id="demo">Test</p
+<button type="button" onclick="myFunction(); alert('Hello world!');">Send email</button>
 
     <script>
         function myFunction() {
-            document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+            document.getElementById("demo").innerHTML = "Test over";
         }
     </script>
 <!-- added ends -->
