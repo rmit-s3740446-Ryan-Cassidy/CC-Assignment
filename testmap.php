@@ -59,7 +59,7 @@ error_reporting(E_ALL); ?>
 // The AWS Region that you want to use to send the email. For a list of
 // AWS Regions where the Amazon Pinpoint Email API is available, see
 // https://docs.aws.amazon.com//pinpoint-email/latest/APIReference
-var aws_region = "us-west-2";
+var aws_region = "ap-southeast-2";
 
 // The "From" address. This address has to be verified in Amazon Pinpoint
 // in the region that you use to send email.
@@ -119,7 +119,7 @@ var charset = "UTF-8";
 AWS.config.update({region:aws_region});
 
 //Create a new PinpointEmail object.
-var pinpointemail = new AWS.PinpointEmail();
+var pinpointEmail = new AWS.PinpointEmail();
 
 // Specify the parameters to pass to the API.
 var params = {
