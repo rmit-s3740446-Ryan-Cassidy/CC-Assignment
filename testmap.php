@@ -156,9 +156,9 @@ var params = {
 pinpointEmail.sendEmail(params, function(err, data) {
   // If something goes wrong, print an error message.
   if(err) {
-    alert(err.message);
+    console.log(err.message);
   } else {
-    alert("Email sent! Message ID: ", data.MessageId);
+    console.log("Email sent! Message ID: ", data.MessageId);
   }
 });
  }
