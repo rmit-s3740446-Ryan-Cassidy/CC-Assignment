@@ -72,11 +72,6 @@ var senderAddress = "herasy@gmail.com";
 // params variable so that it passes an array for each recipient type.
 var toAddresses = [ "s3740446@student.rmit.edu.au" ];
 
-// CC and BCC addresses. If your account is in the sandbox, these
-// addresses have to be verified.
-var ccAddresses = [ "cc_recipient1@example.com","cc_recipient2@example.com" ];
-var bccAddresses = [ "bcc_recipient@example.com" ];
-
 // The configuration set that you want to use to send the email.
 //var configuration_set = "ConfigSet";
 
@@ -128,9 +123,7 @@ var pinpointEmail = new AWS.PinpointEmail();
 var params = {
   FromEmailAddress: senderAddress,
   Destination: {
-    ToAddresses: toAddresses,
-    CcAddresses: ccAddresses,
-    BccAddresses: bccAddresses
+    ToAddresses: toAddresses
   },
   Content: {
     Simple: {
