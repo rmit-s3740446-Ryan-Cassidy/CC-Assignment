@@ -46,7 +46,7 @@ error_reporting(E_ALL); ?>
   <body>
 	  <!-- added -->
 	  <p id="demo">Test</p>
-<input id="btn" type="button" value="Send email" onclick="myFunction()"/>
+<input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 
     <script>
         function myFunction() {
