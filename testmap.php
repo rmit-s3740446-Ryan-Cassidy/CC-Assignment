@@ -45,7 +45,6 @@ error_reporting(E_ALL); ?>
   </head>
   <body>
 	  <!-- added -->
-	  <p id="demo">Test</p>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
