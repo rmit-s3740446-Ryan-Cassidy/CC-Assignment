@@ -109,6 +109,8 @@ try {
   </nav>
   <!-- Page Content -->
   <div class="container">
+  <div class="card">
+  <div class="card-body">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
@@ -124,6 +126,8 @@ try {
 </form>
         </ul>
       </div>
+    </div>
+    </div>
     </div>
   </div>
   
