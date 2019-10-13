@@ -63,7 +63,7 @@ var aws_region = "ap-southeast-2";
 
 // The "From" address. This address has to be verified in Amazon Pinpoint
 // in the region that you use to send email.
-var senderAddress = "vinit.bugtani@gmail.com";
+var senderAddress = "herasy@gmail.com";
 
 // The address on the "To" line. If your Amazon Pinpoint account is in
 // the sandbox, this address also has to be verified.
@@ -71,7 +71,7 @@ var senderAddress = "vinit.bugtani@gmail.com";
 // easier to specify multiple recipients. Alternatively, you can make these
 // variables strings, and then modify the To/Cc/BccAddresses attributes in the
 // params variable so that it passes an array for each recipient type.
-var toAddresses = [ "vinit.bugtani@gmail.com" ];
+var toAddresses = [ "herasy@gmail.com" ];
 
 // CC and BCC addresses. If your account is in the sandbox, these
 // addresses have to be verified.
