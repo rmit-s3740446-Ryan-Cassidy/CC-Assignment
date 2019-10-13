@@ -52,7 +52,6 @@ error_reporting(E_ALL); ?>
      <script type="text/javascript">
         function myFunction() {
             'use strict';
-		AWS.config.region = 'ap-southeast-2';
 
 // var AWS = require('aws-sdk'); //now
 
@@ -71,7 +70,7 @@ var senderAddress = "herasy@gmail.com";
 // easier to specify multiple recipients. Alternatively, you can make these
 // variables strings, and then modify the To/Cc/BccAddresses attributes in the
 // params variable so that it passes an array for each recipient type.
-var toAddresses = [ "herasy@gmail.com" ];
+var toAddresses = [ "s3740446@student.rmit.edu.au" ];
 
 // CC and BCC addresses. If your account is in the sandbox, these
 // addresses have to be verified.
@@ -112,8 +111,8 @@ var charset = "UTF-8";
 
 // Specify that you're using a shared credentials file, and specify which
 // profile to use in the shared credentials file.
-//var credentials = new window.AWS.SharedIniFileCredentials({profile: 'default'});
-//AWS.config.credentials = credentials;
+var credentials = new window.AWS.SharedIniFileCredentials({profile: 'default'});
+AWS.config.credentials = credentials;
 
 // Specify the region.
 AWS.config.update({region:aws_region});
