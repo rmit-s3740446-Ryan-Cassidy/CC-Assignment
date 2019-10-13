@@ -111,7 +111,7 @@ var charset = "UTF-8";
 
 // Specify that you're using a shared credentials file, and specify which
 // profile to use in the shared credentials file.
-var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
+var credentials = new window.AWS.SharedIniFileCredentials({profile: 'default'});
 AWS.config.credentials = credentials;
 
 // Specify the region.
