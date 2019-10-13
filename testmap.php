@@ -70,7 +70,7 @@ var senderAddress = "herasy@gmail.com";
 // easier to specify multiple recipients. Alternatively, you can make these
 // variables strings, and then modify the To/Cc/BccAddresses attributes in the
 // params variable so that it passes an array for each recipient type.
-var toAddresses = [ "s3740446@student.rmit.edu.au" ];
+var toAddresses = [ "vinit.bugtani@gmail.com" ];
 
 // The configuration set that you want to use to send the email.
 //var configuration_set = "ConfigSet";
