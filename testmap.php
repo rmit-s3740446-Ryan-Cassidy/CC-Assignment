@@ -117,7 +117,7 @@ var charset = "UTF-8";
 //config.update({region:aws_region});
 
 //Create a new PinpointEmail object.
-var pinpointEmail = new AWS.PinpointEmail();
+var pinpointEmail = new AWS.PinpointEmail;
 
 // Specify the parameters to pass to the API.
 var params = {
