@@ -14,8 +14,6 @@ error_reporting(E_ALL); ?>
  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    crossorigin=""></script>
-	  <!-- AWS SDK -->
-<script src="aws-sdk-2.548.0.min.js"></script>
     
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -49,9 +47,12 @@ error_reporting(E_ALL); ?>
 	  <!-- added -->
 	  <p id="demo">Test</p>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
+	    <!-- AWS SDK -->
+<script src="aws-sdk-2.548.0.min.js"></script>
      <script type="text/javascript">
         function myFunction() {
             'use strict';
+		AWS.config.region = 'ap-southeast-2';
 
 // var AWS = require('aws-sdk'); //now
 
