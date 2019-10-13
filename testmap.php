@@ -49,6 +49,9 @@ error_reporting(E_ALL); ?>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
+	  <script type = "text/javascript">
+		  var pinpointemail = new AWS.PinpointEmail();
+	  </script>
      <script type="text/javascript">
         function myFunction() {
             'use strict';
@@ -119,7 +122,7 @@ var charset = "UTF-8";
 AWS.config.update({region:aws_region});
 
 //Create a new PinpointEmail object.
-var pinpointemail = new AWS.PinpointEmail();
+//var pinpointemail = new AWS.PinpointEmail();
 
 // Specify the parameters to pass to the API.
 var params = {
