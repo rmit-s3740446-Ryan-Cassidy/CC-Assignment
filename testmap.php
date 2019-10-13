@@ -47,12 +47,12 @@ error_reporting(E_ALL); ?>
 	  <!-- added -->
 	  <p id="demo">Test</p>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
-
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.548.0.min.js"></script>
     <script type="text/javascript">
         function myFunction() {
             'use strict';
 
-var AWS = require('aws-sdk');
+// var AWS = require('aws-sdk'); //now
 
 // The AWS Region that you want to use to send the email. For a list of
 // AWS Regions where the Amazon Pinpoint Email API is available, see
@@ -110,14 +110,14 @@ var charset = "UTF-8";
 
 // Specify that you're using a shared credentials file, and specify which
 // profile to use in the shared credentials file.
-var credentials = new AWS.SharedIniFileCredentials({profile: 'default'});
-AWS.config.credentials = credentials;
+var credentials = new SharedIniFileCredentials({profile: 'default'});
+config.credentials = credentials;
 
 // Specify the region.
-AWS.config.update({region:aws_region});
+config.update({region:aws_region});
 
 //Create a new PinpointEmail object.
-var pinpointEmail = new AWS.PinpointEmail();
+var pinpointEmail = new PinpointEmail();
 
 // Specify the parameters to pass to the API.
 var params = {
