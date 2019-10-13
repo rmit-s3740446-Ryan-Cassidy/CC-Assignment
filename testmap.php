@@ -47,8 +47,8 @@ error_reporting(E_ALL); ?>
 	  <!-- added -->
 	  <p id="demo">Test</p>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
-	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.548.0.min.js"></script>
-    <script type="text/javascript">
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.548.0.min.js">
+    
         function myFunction() {
             'use strict';
 
