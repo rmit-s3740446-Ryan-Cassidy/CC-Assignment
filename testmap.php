@@ -78,7 +78,7 @@ var ccAddresses = [ "cc_recipient1@example.com","cc_recipient2@example.com" ];
 var bccAddresses = [ "bcc_recipient@example.com" ];
 
 // The configuration set that you want to use to send the email.
-var configuration_set = "ConfigSet";
+//var configuration_set = "ConfigSet";
 
 // The subject line of the email.
 var subject = "Amazon Pinpoint Test (AWS SDK for JavaScript in Node.js)";
@@ -150,7 +150,6 @@ var params = {
       }
     }
   },
-  ConfigurationSetName: configuration_set,
   EmailTags: [
     tag0,
     tag1
