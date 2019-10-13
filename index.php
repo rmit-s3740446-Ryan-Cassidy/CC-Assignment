@@ -11,7 +11,8 @@ $bucketName = 'ccptvapp';
 $IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
 $IAM_SECRET = 'Dt1o3ROc6db6bZSbleufErXUVh8xU9vYUTIx4ulm';
 if (isset($_POST["submit"])) {
-    
+   
+    //File info success TESTING PLEASE REMOVE LATER OR REPLACE
 if ($_FILES["file"]["error"] > 0)
 {
     echo "Error: " . $_FILES["file"]["error"] . "<br />";
@@ -66,8 +67,6 @@ try {
 }
 }
 ?>
-
-
 <html lang="en">
 
 <head>
@@ -115,19 +114,19 @@ try {
         <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
         <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
         <ul class="list-unstyled">
-          <li>Bootstrap 4.3.1</li>
-          <li>jQuery 3.4.1</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <form action="index.php" method="post"
+          <li>Please select a csv coordinates file</li>
+          <form action="index.php" method="post"
 	enctype="multipart/form-data">
 <label for="file">Filename:</label>
 <input type="file" name="file" id="file" /> 
 <br />
 <input type="submit" name="submit" value="Submit" />
 </form>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
