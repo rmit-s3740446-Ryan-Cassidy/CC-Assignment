@@ -66,6 +66,16 @@ try {
 }
 }
 ?>
+<!-- added -->
+ <p id="demo" onclick="myFunction()">Click me.</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+        }
+    </script>
+<!-- added ends -->
+
 <html lang="en">
 
 <head>
