@@ -44,6 +44,16 @@ error_reporting(E_ALL); ?>
   </nav>
   </head>
   <body>
+	  <!-- added -->
+ <p id="demo" onclick="myFunction()">Click me.</p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+        }
+    </script>
+<!-- added ends -->
+	  
 	 <?php  
 	   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
