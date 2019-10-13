@@ -110,11 +110,11 @@ var charset = "UTF-8";
 
 // Specify that you're using a shared credentials file, and specify which
 // profile to use in the shared credentials file.
-var credentials = new SharedIniFileCredentials({profile: 'default'});
-config.credentials = credentials;
+///var credentials = new SharedIniFileCredentials({profile: 'default'});
+//config.credentials = credentials;
 
 // Specify the region.
-config.update({region:aws_region});
+//config.update({region:aws_region});
 
 //Create a new PinpointEmail object.
 var pinpointEmail = new PinpointEmail();
