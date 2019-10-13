@@ -112,14 +112,15 @@ var charset = "UTF-8";
 // Specify that you're using a shared credentials file, and specify which
 // profile to use in the shared credentials file.
 		
-var credentials = new AWS.CognitoIdentityCredentials({
+var creds = new AWS.CognitoIdentityCredentials({
             IdentityPoolId: 'ap-southeast-2:10ef0d64-1372-442d-9597-da30b51e53f5',
 		region: 'ap-southeast-2'
         });
-AWS.config.credentials = credentials;
+AWS.config.credentials = creds;
 
 // Specify the region.
-AWS.config.update({region:aws_region});
+AWS.config.update({region:aws_region,
+		  credentials:creds});
 
 //Create a new PinpointEmail object.
 var pinpointEmail = new AWS.PinpointEmail();
