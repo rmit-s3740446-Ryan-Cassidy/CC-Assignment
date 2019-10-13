@@ -48,7 +48,7 @@ error_reporting(E_ALL); ?>
 	  <p id="demo">Test</p>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 
-    <script>
+    <script type="text/javascript">
         function myFunction() {
             'use strict';
 
