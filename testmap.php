@@ -16,7 +16,6 @@ error_reporting(E_ALL); ?>
    crossorigin=""></script>
 <!--<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script> test added-->
 	  <script src='https://unpkg.com/leaflet-image@latest/leaflet-image.js'></script><!--test added-->
-	  <script src="canvas2image.js"></script>
     
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -76,7 +75,7 @@ var senderAddress = "herasy@gmail.com";
 // easier to specify multiple recipients. Alternatively, you can make these
 // variables strings, and then modify the To/Cc/BccAddresses attributes in the
 // params variable so that it passes an array for each recipient type.
-var toAddresses = [ "herasy@gmail.com" ];
+var toAddresses = [ "vineet.bugtani@icloud.com" ];
 
 // The configuration set that you want to use to send the email.
 //var configuration_set = "ConfigSet";
@@ -216,12 +215,9 @@ while($query_data = mysqli_fetch_array($result)) {
     var dimensions = map.getSize();
     img.width = dimensions.x;
     img.height = dimensions.y;
-    img.src = canvas.toDataURL();
-//     var image = new Image();
-//     image.src = img.src;  
-var pngImg = Canvas2Image.convertToPNG(img);
+    img.src = canvas.toDataURL(); 
 document.getElementById('images').innerHTML = '';
-document.getElementById('images').appendChild(pngImg);
+document.getElementById('images').appendChild(img);
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
