@@ -146,7 +146,7 @@ var params = {
     Simple: {
       Body: {
         Html: {
-          Data: myDiv,
+          Data: body_html,
           Charset: charset
         },
         Text: {
