@@ -45,6 +45,7 @@ error_reporting(E_ALL); ?>
   </head>
   <body>
 	  <!-- added -->
+<img id="myImg" src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228"> //14/10
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
@@ -92,6 +93,7 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//pinpoint/'>the Amazon Pinpoint Email API</a> using the
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
+<p id="demo">document.getElementById("myImg").src</p> //14/10
 </body>
 </html>`;
 
