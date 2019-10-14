@@ -97,7 +97,7 @@ var body_html = `<html>
 
 </body>
 </html>`;
-alert(document.getElementById("myImg").src) <!-- //14/10 -->
+alert(document.getElementById("myImg")) <!-- //14/10 -->
 // The message tags that you want to apply to the email.
 var tag0 = { 'Name':'key0', 'Value':'value0' };
 var tag1 = { 'Name':'key1', 'Value':'value1' };
