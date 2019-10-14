@@ -205,7 +205,7 @@ while($query_data = mysqli_fetch_array($result)) {
 		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 		  
 		  
-		  leafletImage(map1, function(err, canvas) {
+		  leafletImage(map, function(err, canvas) {
     // now you have canvas
     // example thing to do with that canvas:
 console.log('came here');
