@@ -49,7 +49,9 @@ error_reporting(E_ALL); ?>
 	  <!-- added -->
 <div id="test">
 <img id="myImg" src="https://turntable.kagiso.io/images/Screen_Shot_2019-03-26_at_9.55.42_AM.width-800.png" alt="The Pulpit Rock" width="304" height="228">
-</div> <!-- //14/10 -->
+</div><!-- //14/10 -->
+<div id="images">
+</div><!-- //14/10 -->
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
@@ -216,7 +218,9 @@ console.log('came here');
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
     
-			    myDiv = img.innerHTML; //test added
+document.getElementById('images').innerHTML = '';
+    document.getElementById('images').appendChild(img);
+			  myDiv = document.getElementById('images').innerHTML; //test added
 });                                                     
 		
 	  </script>
