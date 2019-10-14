@@ -218,15 +218,15 @@ while($query_data = mysqli_fetch_array($result)) {
     var dimensions = map.getSize();
     img.width = dimensions.x;
     img.height = dimensions.y;
-    img.src = canvas.toDataURL();
-    var image = new Image();
-    image.src = img.src;  
+    img.src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+//     var image = new Image();
+//     image.src = img.src;  
 document.getElementById('images').innerHTML = '';
 document.getElementById('images').appendChild(image);
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
-			 myDiv = document.getElementById('images').innerHTML; //test added
+			 //myDiv = document.getElementById('images').innerHTML; //test added
 		  
 });
 		
