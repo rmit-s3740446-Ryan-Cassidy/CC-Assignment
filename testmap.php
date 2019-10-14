@@ -53,11 +53,7 @@ error_reporting(E_ALL); ?>
 <script src="aws-sdk-2.548.0.min.js"></script>
      <script type="text/javascript">
 	     
-function myFunctionReturns() {
-
- return	document.getElementById("test").innerHTML;
-}
-        function myFunction() {
+     function myFunction() {
             'use strict';
 
 // var AWS = require('aws-sdk'); //now
@@ -103,9 +99,7 @@ var body_html = `<html>
 <div id="testOne">
 <img id="demo" src="" alt="The Pulpit Rock" width="304" height="228">
 </div> <!-- //14/10 -->
-<script>
-document.getElementById("testOne").innerHTML = myFunctionReturns();
-</script>
+
 </body>
 </html>`;
 
