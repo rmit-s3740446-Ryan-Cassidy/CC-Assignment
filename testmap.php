@@ -104,7 +104,7 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//pinpoint/'>the Amazon Pinpoint Email API</a> using the
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
-<img id="myImg" src=""> 
+<div id="myImg"></div>
 <!-- //14/10 -->
 
 <!-- myDiv 14/10 -->
