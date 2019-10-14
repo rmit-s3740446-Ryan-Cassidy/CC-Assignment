@@ -197,6 +197,9 @@ while($query_data = mysqli_fetch_array($result)) {
     var coords = [-37.8183431013018, 144.952513264004]; // the geographic center of our map
     var zoomLevel = 13; // the map scale. See: http://wiki.openstreetmap.org/wiki/Zoom_levels
     var map = L.map('map').setView(coords, zoomLevel);
+		  map = L.map('map', {
+        preferCanvas: true
+    });
     var latlngs = JSON.parse('<?php echo json_encode($coords); ?>');
     
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
