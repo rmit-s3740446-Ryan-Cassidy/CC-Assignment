@@ -223,7 +223,7 @@ console.log('came here');
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
     
-document.getElementById('myImg').innerHTML = '';
+//document.getElementById('myImg').innerHTML = '';
     document.getElementById('myImg').appendChild(img);
 			 //myDiv = document.getElementById('images').innerHTML; //test added
 });                                                     
