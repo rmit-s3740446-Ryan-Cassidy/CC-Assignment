@@ -215,8 +215,7 @@ console.log('came here');
     img.width = dimensions.x;
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
-    document.getElementById('images').innerHTML = '';
-    document.getElementById('images').appendChild(img);
+    
 			    myDiv = img; //test added
 });                                                     
 		
