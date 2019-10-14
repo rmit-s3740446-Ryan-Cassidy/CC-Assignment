@@ -104,14 +104,14 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//pinpoint/'>the Amazon Pinpoint Email API</a> using the
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
-<img id="myImg" src="">
-</div> 
+<img id="myImg" src=""> 
 <!-- //14/10 -->
 
 <!-- myDiv 14/10 -->
 
 </body>
 </html>`;
+	     leafletgetImage();
 
 // The message tags that you want to apply to the email.
 var tag0 = { 'Name':'key0', 'Value':'value0' };
@@ -212,21 +212,23 @@ while($query_data = mysqli_fetch_array($result)) {
 }).addTo(map);
 		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 		  
-		  
+		 function leafletgetImage() { 
 		  leafletImage(map, function(err, canvas) {
     // now you have canvas
     // example thing to do with that canvas:
-console.log('came here');
     var img = document.createElement('img');
     var dimensions = map.getSize();
     img.width = dimensions.x;
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
+console.log('get image func');
     
 //document.getElementById('myImg').innerHTML = '';
     document.getElementById('myImg').appendChild(img);
 			 //myDiv = document.getElementById('images').innerHTML; //test added
-});                                                     
+		  
+});
+		 }
 		
 	  </script>
   </body>
