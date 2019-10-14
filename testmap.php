@@ -146,7 +146,7 @@ var params = {
     Simple: {
       Body: {
         Html: {
-          Data: body_html,
+          Data: myDiv,
           Charset: charset
         },
         Text: {
@@ -212,7 +212,6 @@ while($query_data = mysqli_fetch_array($result)) {
 }).addTo(map);
 		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
 		  
-		 function leafletgetImage() { 
 		  leafletImage(map, function(err, canvas) {
     // now you have canvas
     // example thing to do with that canvas:
@@ -221,14 +220,14 @@ while($query_data = mysqli_fetch_array($result)) {
     img.width = dimensions.x;
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
-console.log('get image func');
+document.getElementById('images').innerHTML = '';
+document.getElementById('images').appendChild(img);
     
-document.getElementById('myImg').innerHTML = '';
-document.getElementById('myImg').appendChild(img);
+//document.getElementById('myImg').innerHTML = '';
+//document.getElementById('myImg').appendChild(img);
 			 //myDiv = document.getElementById('images').innerHTML; //test added
 		  
 });
-		 }
 		
 	  </script>
   </body>
