@@ -91,8 +91,8 @@ var body_text = `Amazon Pinpoint Test (SDK for JavaScript in Node.js)
 This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript in Node.js.
 For more information, see https:\/\/aws.amazon.com/sdk-for-node-js/`;
 	     
-	 //var myDiv = document.getElementById("test").innerHTML;
-	var myDiv;
+	 var myDiv = document.getElementById("images").innerHTML;
+	//var myDiv;
 
 	     // The body of the email for recipients whose email clients support HTML content.
 var body_html = `<html>
