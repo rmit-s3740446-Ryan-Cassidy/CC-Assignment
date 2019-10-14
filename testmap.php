@@ -87,7 +87,7 @@ var body_text = `Amazon Pinpoint Test (SDK for JavaScript in Node.js)
 This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript in Node.js.
 For more information, see https:\/\/aws.amazon.com/sdk-for-node-js/`;
 	     
-	 var myDiv = document.getElementById("map").innerHTML;
+	 var myDiv = document.getElementById("test").innerHTML;
 
 // The body of the email for recipients whose email clients support HTML content.
 var body_html = `<html>
@@ -173,8 +173,9 @@ var params = {
  }
     </script>
 <!-- added ends -->
-	  
-	 <?php  
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script> <!--test added-->	  
+	
+	  <?php  
 	   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -200,6 +201,19 @@ while($query_data = mysqli_fetch_array($result)) {
 	accessToken: 'pk.eyJ1IjoiaGVyYXN5IiwiYSI6ImNrMWcwbG9xNzB6azUzbW1tZ3drbTdxc2YifQ.IDi32Sz2mSNS1VlrvL21pQ'
 }).addTo(map);
 		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+		  
+		  leafletImage(map, function(err, canvas) {
+    // now you have canvas
+    // example thing to do with that canvas:
+    var img = document.createElement('img');
+    var dimensions = map.getSize();
+    img.width = dimensions.x;
+    img.height = dimensions.y;
+    img.src = canvas.toDataURL();
+    document.getElementById('images').innerHTML = '';
+    document.getElementById('images').appendChild(img);
+});                                                     
+		  myDiv = document.getElementById("images").innerHTML; //test added
 	  </script>
   </body>
 </html>
