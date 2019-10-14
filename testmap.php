@@ -226,7 +226,7 @@ document.getElementById('images').appendChild(image);
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
-			 //myDiv = document.getElementById('images').innerHTML; //test added
+			 myDiv = document.getElementById('images').innerHTML; //test added
 		  
 });
 		
