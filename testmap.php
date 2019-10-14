@@ -217,8 +217,9 @@ console.log('came here');
     img.src = canvas.toDataURL();
     document.getElementById('images').innerHTML = '';
     document.getElementById('images').appendChild(img);
+			    myDiv = img; //test added
 });                                                     
-		  myDiv = img; //test added
+		
 	  </script>
   </body>
 </html>
