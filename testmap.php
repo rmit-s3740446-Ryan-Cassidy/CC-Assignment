@@ -16,6 +16,7 @@ error_reporting(E_ALL); ?>
    crossorigin=""></script>
 <!--<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script> test added-->
 	  <script src='https://unpkg.com/leaflet-image@latest/leaflet-image.js'></script><!--test added-->
+	  <script src="canvas2image.js"></script>
     
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
@@ -47,9 +48,6 @@ error_reporting(E_ALL); ?>
   </head>
   <body>
 	  <!-- added -->
-<div id="test">
-<img id="testImg" src="https://turntable.kagiso.io/images/Screen_Shot_2019-03-26_at_9.55.42_AM.width-800.png" alt="The Pulpit Rock" width="304" height="228">
-</div><!-- //14/10 -->
 <div id="images">
 	<img id="testImg1" src="" alt="The Pulpit Rock" width="304" height="228">
 </div><!-- //14/10 -->
@@ -218,11 +216,12 @@ while($query_data = mysqli_fetch_array($result)) {
     var dimensions = map.getSize();
     img.width = dimensions.x;
     img.height = dimensions.y;
-    img.src = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    img.src = canvas.toDataURL();
 //     var image = new Image();
 //     image.src = img.src;  
+var pngImg = Canvas2Image.saveAsPNG(img);
 document.getElementById('images').innerHTML = '';
-document.getElementById('images').appendChild(image);
+document.getElementById('images').appendChild(pngImg);
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
