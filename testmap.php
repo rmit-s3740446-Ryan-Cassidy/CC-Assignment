@@ -88,9 +88,10 @@ var body_text = `Amazon Pinpoint Test (SDK for JavaScript in Node.js)
 This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript in Node.js.
 For more information, see https:\/\/aws.amazon.com/sdk-for-node-js/`;
 	     
-	 var myDiv = document.getElementById("test").innerHTML;
+	 //var myDiv = document.getElementById("test").innerHTML;
+	var myDiv;
 
-// The body of the email for recipients whose email clients support HTML content.
+	     // The body of the email for recipients whose email clients support HTML content.
 var body_html = `<html>
 <head></head>
 <body>
@@ -206,6 +207,7 @@ while($query_data = mysqli_fetch_array($result)) {
 		  leafletImage(map, function(err, canvas) {
     // now you have canvas
     // example thing to do with that canvas:
+console.log('came here');
     var img = document.createElement('img');
     var dimensions = map.getSize();
     img.width = dimensions.x;
@@ -214,7 +216,7 @@ while($query_data = mysqli_fetch_array($result)) {
     document.getElementById('images').innerHTML = '';
     document.getElementById('images').appendChild(img);
 });                                                     
-		  myDiv = document.getElementById("images").innerHTML; //test added
+		  myDiv = document.getElementById('images').innerHTML; //test added
 	  </script>
   </body>
 </html>
