@@ -216,7 +216,7 @@ console.log('came here');
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
     
-			    myDiv = img; //test added
+			    myDiv = img.innerHTML; //test added
 });                                                     
 		
 	  </script>
