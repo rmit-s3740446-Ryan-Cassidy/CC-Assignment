@@ -78,7 +78,7 @@ var senderAddress = "herasy@gmail.com";
 // easier to specify multiple recipients. Alternatively, you can make these
 // variables strings, and then modify the To/Cc/BccAddresses attributes in the
 // params variable so that it passes an array for each recipient type.
-var toAddresses = [ "vinit.bugtani@gmail.com" ];
+var toAddresses = [ "herasy@gmail.com" ];
 
 // The configuration set that you want to use to send the email.
 //var configuration_set = "ConfigSet";
@@ -104,8 +104,7 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//pinpoint/'>the Amazon Pinpoint Email API</a> using the
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
- <div id="testOne">
-<img id="myImg" src="" alt="The Pulpit Rock" width="304" height="228">
+<img id="myImg" src="">
 </div> 
 <!-- //14/10 -->
 
@@ -224,9 +223,9 @@ console.log('came here');
     img.height = dimensions.y;
     img.src = canvas.toDataURL();
     
-document.getElementById('images').innerHTML = '';
-    document.getElementById('images').appendChild(img);
-			 myDiv = document.getElementById('images').innerHTML; //test added
+document.getElementById('myImg').innerHTML = '';
+    document.getElementById('myImg').appendChild(img);
+			 //myDiv = document.getElementById('images').innerHTML; //test added
 });                                                     
 		
 	  </script>
