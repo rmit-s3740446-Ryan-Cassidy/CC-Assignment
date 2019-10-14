@@ -219,7 +219,7 @@ while($query_data = mysqli_fetch_array($result)) {
     img.src = canvas.toDataURL();
 //     var image = new Image();
 //     image.src = img.src;  
-var pngImg = Canvas2Image.saveAsPNG(img);
+var pngImg = Canvas2Image.convertToPNG(img);
 document.getElementById('images').innerHTML = '';
 document.getElementById('images').appendChild(pngImg);
     
