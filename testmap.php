@@ -48,7 +48,6 @@ error_reporting(E_ALL); ?>
   <body>
 	  <!-- added -->
 <div id="images">
-	<img id="testImg1" src="" alt="The Pulpit Rock" width="304" height="228">
 </div>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
@@ -207,6 +206,7 @@ while($query_data = mysqli_fetch_array($result)) {
 	accessToken: 'pk.eyJ1IjoiaGVyYXN5IiwiYSI6ImNrMWcwbG9xNzB6azUzbW1tZ3drbTdxc2YifQ.IDi32Sz2mSNS1VlrvL21pQ'
 }).addTo(map);
 		  var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+		  map.fitBounds(polyline.getBounds());
 		  
 		  leafletImage(map, function(err, canvas) {
     // now you have canvas
