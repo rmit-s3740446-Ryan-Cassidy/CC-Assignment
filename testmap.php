@@ -101,9 +101,7 @@ var body_html = `<html>
  <div id="testOne">
 <img id="myImg" src="" alt="The Pulpit Rock" width="304" height="228">
 </div> 
-<script type="text/javascript">
-   document.getElementById("testOne").innerHTML = myDiv;
-</script><!-- //14/10 -->
+<!-- //14/10 -->
 
 <!-- myDiv 14/10 -->
 
@@ -143,11 +141,11 @@ var params = {
     Simple: {
       Body: {
         Html: {
-          Data: body_html,
+          Data: myDiv,
           Charset: charset
         },
         Text: {
-          Data: myDiv,
+          Data: body_text,
           Charset: charset
         }
       },
