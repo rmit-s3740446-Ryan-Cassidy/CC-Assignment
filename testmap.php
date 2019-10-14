@@ -52,6 +52,11 @@ error_reporting(E_ALL); ?>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
      <script type="text/javascript">
+	     
+function myFunctionReturns() {
+
+ return	document.getElementById("test").innerHTML;
+}
         function myFunction() {
             'use strict';
 
@@ -98,10 +103,11 @@ var body_html = `<html>
 <div id="testOne">
 <img id="demo" src="" alt="The Pulpit Rock" width="304" height="228">
 </div> <!-- //14/10 -->
+<script>
+document.getElementById("testOne").innerHTML = myFunctionReturns();
+</script>
 </body>
 </html>`;
-
-body_html.getElementById("testOne").innerHTML= document.getElementById("test").innerHTML;  <!-- //14/10 -->
 
 // The message tags that you want to apply to the email.
 var tag0 = { 'Name':'key0', 'Value':'value0' };
@@ -157,14 +163,14 @@ var params = {
 };
 
 //Try to send the email.
-pinpointEmail.sendEmail(params, function(err, data) {
+/* pinpointEmail.sendEmail(params, function(err, data) {
   // If something goes wrong, print an error message.
   if(err) {
     console.log(err.message);
   } else {
     console.log("Email sent! Message ID: ", data.MessageId);
   }
-}); 
+});*/
  }
     </script>
 <!-- added ends -->
