@@ -49,7 +49,7 @@ error_reporting(E_ALL); ?>
 	  <!-- added -->
 <div id="images">
 	<img id="testImg1" src="" alt="The Pulpit Rock" width="304" height="228">
-</div><!-- //14/10 -->
+</div>
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
 <script src="aws-sdk-2.548.0.min.js"></script>
@@ -218,6 +218,7 @@ while($query_data = mysqli_fetch_array($result)) {
     img.src = canvas.toDataURL(); 
 document.getElementById('images').innerHTML = '';
 document.getElementById('images').appendChild(img);
+document.getElementById("images").style.display = "none";
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
