@@ -94,7 +94,7 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
 <p id="demo">document.getElementById("myImg").src</p> <!-- //14/10 -->
-console.log(document.getElementById("myImg").src) <!-- //14/10 -->
+alert(document.getElementById("myImg").src) <!-- //14/10 -->
 </body>
 </html>`;
 
