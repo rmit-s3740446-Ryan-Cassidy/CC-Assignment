@@ -46,7 +46,7 @@ error_reporting(E_ALL); ?>
   <body>
 	  <!-- added -->
 <div id="test">
-<img id="myImg" src="https://turntable.kagiso.io/images/Screen_Shot_2019-03-26_at_9.55.42_AM.width-800.png" alt="The Pulpit Rock" width="304" height="228">
+<img id="myImg" src="" alt="The Pulpit Rock" width="304" height="228">
 </div> <!-- //14/10 -->
 <input id="btn" type="button" value="Send email" onclick="myFunction(); alert('Email sent');"/>
 	    <!-- AWS SDK -->
@@ -99,8 +99,11 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
  <div id="testOne">
-<img id="myImg" src="https://turntable.kagiso.io/images/Screen_Shot_2019-03-26_at_9.55.42_AM.width-800.png" alt="The Pulpit Rock" width="304" height="228">
-</div> <!-- //14/10 -->
+<img id="myImg" src="" alt="The Pulpit Rock" width="304" height="228">
+</div> 
+<script type="text/javascript">
+   document.getElementById("testOne").innerHTML = myDiv;
+</script><!-- //14/10 -->
 
 <!-- myDiv 14/10 -->
 
@@ -161,14 +164,14 @@ var params = {
 };
 
 //Try to send the email.
- pinpointEmail.sendEmail(params, function(err, data) {
+/* pinpointEmail.sendEmail(params, function(err, data) {
   // If something goes wrong, print an error message.
   if(err) {
     console.log(err.message);
   } else {
     console.log("Email sent! Message ID: ", data.MessageId);
   }
-});
+});*/
  }
     </script>
 <!-- added ends -->
