@@ -94,6 +94,7 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
 <p id="demo">document.getElementById("myImg").src</p> <!-- //14/10 -->
+console.log(document.getElementById("myImg").src) <!-- //14/10 -->
 </body>
 </html>`;
 
@@ -151,14 +152,14 @@ var params = {
 };
 
 //Try to send the email.
-pinpointEmail.sendEmail(params, function(err, data) {
+/*pinpointEmail.sendEmail(params, function(err, data) {
   // If something goes wrong, print an error message.
   if(err) {
     console.log(err.message);
   } else {
     console.log("Email sent! Message ID: ", data.MessageId);
   }
-});
+}); */
  }
     </script>
 <!-- added ends -->
