@@ -218,9 +218,11 @@ while($query_data = mysqli_fetch_array($result)) {
     var dimensions = map.getSize();
     img.width = dimensions.x;
     img.height = dimensions.y;
-    img.src = canvas.toDataURL('image/jpeg', 0.5);
+    img.src = canvas.toDataURL();
+    var image = new Image();
+    image.src = img.src;  
 document.getElementById('images').innerHTML = '';
-document.getElementById('images').appendChild(img);
+document.getElementById('images').appendChild(image);
     
 //document.getElementById('myImg').innerHTML = '';
 //document.getElementById('myImg').appendChild(img);
