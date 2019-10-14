@@ -226,7 +226,7 @@ console.log('came here');
     
 document.getElementById('images').innerHTML = '';
     document.getElementById('images').appendChild(img);
-			 // myDiv = document.getElementById('images').innerHTML; //test added
+			 myDiv = document.getElementById('images').innerHTML; //test added
 });                                                     
 		
 	  </script>
