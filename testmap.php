@@ -102,7 +102,7 @@ var body_html = `<html>
 <img id="demo" src="" alt="The Pulpit Rock" width="304" height="228">
 </div>  //14/10 -->
 
-myDiv <!-- //14/10 -->
+<!-- myDiv 14/10 -->
 
 </body>
 </html>`;
@@ -144,7 +144,7 @@ var params = {
           Charset: charset
         },
         Text: {
-          Data: body_text,
+          Data: myDiv,
           Charset: charset
         }
       },
