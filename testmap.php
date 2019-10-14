@@ -111,7 +111,6 @@ var body_html = `<html>
 
 </body>
 </html>`;
-	     leafletgetImage();
 
 // The message tags that you want to apply to the email.
 var tag0 = { 'Name':'key0', 'Value':'value0' };
