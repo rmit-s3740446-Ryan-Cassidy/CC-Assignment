@@ -39,26 +39,12 @@ while($query_data = mysqli_fetch_array($result)) {
       <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Cloud Computing</a>
+      <a class="navbar-brand" href="index.php">Cloud Computing</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.php">Stats
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="testmap.php">Map</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -78,7 +64,7 @@ while($query_data = mysqli_fetch_array($result)) {
     <div class="card">
     Filename: <?php echo $_SESSION['filename'];?> <br>
     Number of coordinate pairs: <?php echo count($coords);?> <br>
-    <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
+    Send a picture to email? - > <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
     </div>
     </div>
     </div>
@@ -94,24 +80,11 @@ var toAddresses = [ "vineet.bugtani@icloud.com" ];
 //Subject Line
 var subject = "Cloud Computing - Map";
 //Email Body
-var body_text = `Amazon Pinpoint Test (SDK for JavaScript in Node.js)
+var body_text = `Amazon Pinpoint Email
 ----------------------------------------------------
-This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript in Node.js.
-For more information, see https:\/\/aws.amazon.com/sdk-for-node-js/`;
-	     
+This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript.;
+//Image
 var myDiv = document.getElementById("images").innerHTML;
-//html body
-var body_html = `<html>
-<head></head>
-<body>
-  <h1>Amazon Pinpoint Test (SDK for JavaScript in Node.js)</h1>
-  <p>This email was sent with
-    <a href='https://aws.amazon.com//pinpoint/'>the Amazon Pinpoint Email API</a> using the
-    <a href='https://aws.amazon.com//sdk-for-node-js/'>
-      AWS SDK for JavaScript in Node.js</a>.</p>
-<div id="myImg"></div>
-</body>
-</html>`;
 // Message Tags
 var tag0 = { 'Name':'key0', 'Value':'value0' };
 var tag1 = { 'Name':'key1', 'Value':'value1' };
