@@ -74,12 +74,12 @@ while($query_data = mysqli_fetch_array($result)) {
     <div id="map" style="width:800px; height: 500px;"></div>
     </div>
     </div>
-    <div class="card">
-    </div>
     <div class="col-md-4">
-    Filename: <?php echo $_SESSION['filename'];?>
-    Number of coordinate pairs: <?php echo count($coords);?>
+    <div class="card">
+    Filename: <?php echo $_SESSION['filename'];?> <br>
+    Number of coordinate pairs: <?php echo count($coords);?> <br>
     <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
+    </div>
     </div>
     </div>
      <script type="text/javascript">
