@@ -64,7 +64,7 @@ while($query_data = mysqli_fetch_array($result)) {
     <div class="card">
     Filename: <?php echo $_SESSION['filename'];?> <br>
     Number of coordinate pairs: <?php echo count($coords);?> <br>
-    Send a picture to email? - > <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
+    <input id="btn" type="button" value="Send map to email" onclick="emailFunction(); alert('Email sent');"/>
     </div>
     </div>
     </div>
