@@ -57,9 +57,22 @@ if (!isset($_SESSION['success'])){
   </head>
   <body>
 	  <!-- added -->
-<div id="images">
-</div>
-<input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
+<div id="images"></div>
+<div class="container">
+<div class="col-md-4">
+<div class="card">
+    <!-- Leaflet Map -->
+    <div id="map" style="width:800px; height: 500px;"></div>
+    </div>
+    </div>
+    <div class="card">
+    </div>
+    <div class="col-md-4">
+    Filename: <?php echo $_SESSSION['filename'];?>
+    Number of coordinate pairs: <?php echo count($coords);?>
+    <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
+    </div>
+    </div>
      <script type="text/javascript">
      function emailFunction() {
             'use strict';
@@ -88,8 +101,6 @@ var body_html = `<html>
     <a href='https://aws.amazon.com//sdk-for-node-js/'>
       AWS SDK for JavaScript in Node.js</a>.</p>
 <div id="myImg"></div>
-<!-- //14/10 -->
-<!-- myDiv 14/10 -->
 </body>
 </html>`;
 // Message Tags
@@ -156,9 +167,7 @@ var params = {
 while($query_data = mysqli_fetch_array($result)) {
   $coords[] = array((float)$query_data['lat'], (float)$query_data['lon']);
 }
-	  echo count($coords);  ?>
-	  <!-- Leaflet Map -->
-    <div id="map" style="width:800px; height: 500px;"></div>
+  ?>
 	  <script>
 	  //Create leaflet map object
 		 var map = L.map('map', {
