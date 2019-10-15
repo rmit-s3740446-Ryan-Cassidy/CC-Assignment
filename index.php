@@ -13,7 +13,7 @@ $IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
 $IAM_SECRET = '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';
 $allowed_ext = array('txt', 'csv');
 if (isset($_POST["submit"])) {
-    $file = $_FILES['filesel']['tmp_name'];
+    $file = $_FILES['filesel']['name'];
     $fileinfo = pathinfo($file);
     if (!in_array($fileinfo['extension'], $allowed_ext)){
         echo '<script type="text/javascript">alert("Invalid file selected")</script>';
