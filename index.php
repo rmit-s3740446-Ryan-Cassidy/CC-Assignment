@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 session_start();
+session_unset();
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 require 'vendor/autoload.php';
@@ -11,8 +12,6 @@ $bucketName = 'ccptvapp';
 $IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
 $IAM_SECRET = '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';
 $allowed_ext = array('txt', 'csv');
-$_SESSION['success'] = false;
-$_SESSION['filename'] = '';
 if (isset($_POST["submit"])) {
     $file = $_FILES['filesel']['tmp_name'];
     $fileinfo = pathinfo($file);
@@ -51,6 +50,7 @@ try {
         );
     $_SESSION['filename'] = $_FILES['filesel']['tmp_name'];
     $_SESSION['success'] = true;
+    header("Location: map.php");
 } catch (S3Exception $e) {
     die('Error:' . $e->getMessage());
 } catch (Exception $e) {
