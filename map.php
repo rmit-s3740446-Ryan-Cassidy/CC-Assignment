@@ -5,6 +5,15 @@ error_reporting(E_ALL);
 if (!isset($_SESSION['success'])){
     header("Location: index.php");
 }
+//Connect to our mySQL Database and retrieve the coords
+$connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
+if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+$database = mysqli_select_db($connection, 'gtfs');
+$coords = array();
+$result = mysqli_query($connection, "SELECT * FROM coords");
+while($query_data = mysqli_fetch_array($result)) {
+    $coords[] = array((float)$query_data['lat'], (float)$query_data['lon']);
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -68,7 +77,7 @@ if (!isset($_SESSION['success'])){
     <div class="card">
     </div>
     <div class="col-md-4">
-    Filename: <?php echo $_SESSSION['filename'];?>
+    Filename: <?php echo $_SESSION['filename'];?>
     Number of coordinate pairs: <?php echo count($coords);?>
     <input id="btn" type="button" value="Send email" onclick="emailFunction(); alert('Email sent');"/>
     </div>
@@ -155,19 +164,6 @@ var params = {
 });
  }
     </script>
-	  
-	
-	  <?php  
-  //Connect to our MySQL Database and retrieve coords
-  $connection = mysqli_connect('database-1.chyh1wnf7bbo.ap-southeast-2.rds.amazonaws.com', 'admin', 'cloudpass');
-  if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  $database = mysqli_select_db($connection, 'gtfs');
-  $coords = array();
-  $result = mysqli_query($connection, "SELECT * FROM coords");
-while($query_data = mysqli_fetch_array($result)) {
-  $coords[] = array((float)$query_data['lat'], (float)$query_data['lon']);
-}
-  ?>
 	  <script>
 	  //Create leaflet map object
 		 var map = L.map('map', {
