@@ -47,11 +47,11 @@ try {
     die("Error: " . $e->getMessage());
 }
 
-$keyName = 'key/' . basename($_FILES['file']['tmp_name']);
+$keyName = 'key/' . basename($_FILES['filesel']['tmp_name']);
 $pathInS3 = 'https://s3.ap-southeast-2.amazonaws.com/' . $bucketName . '/' . $keyName;
 
 try {
-    $file = $_FILES['file']['tmp_name'];
+    $file = $_FILES['filesel']['tmp_name'];
     $s3->putObject(
         array(
             'Bucket'=>$bucketName,
