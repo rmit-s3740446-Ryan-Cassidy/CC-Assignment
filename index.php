@@ -10,25 +10,29 @@ use Aws\S3\Exception\S3Exception;
 $bucketName = 'ccptvapp';
 $IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
 $IAM_SECRET = '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';
+$allowed_ext = array('txt', 'csv');
 if (isset($_POST["submit"])) {
+    $file = $_FILES['file']['tmp_name'];
+    $fileinfo = pathinfo($file);
+    if (!in_array($fileinfo['extension'], $allowed_ext)){
+        echo '<script type="text/javascript">alert("Invalid")</script>';
+    }
+    
    
-    //File info success TESTING PLEASE REMOVE LATER OR REPLACE
-if ($_FILES["file"]["error"] > 0)
-{
-    echo "Error: " . $_FILES["file"]["error"] . "<br />";
-}
-else
-{
-    echo "Upload: " . $_FILES["file"]["name"] . "<br />";
-    echo "Type: " . $_FILES["file"]["type"] . "<br />";
-    echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-    echo "Stored in: " . $_FILES["file"]["tmp_name"];
-}
-
+// if ($_FILES["file"]["error"] > 0)
+// {
+//     echo "Error: " . $_FILES["file"]["error"] . "<br />";
+// }
+// else
+// {
+//     echo "Upload: " . $_FILES["file"]["name"] . "<br />";
+//     echo "Type: " . $_FILES["file"]["type"] . "<br />";
+//     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
+//     echo "Stored in: " . $_FILES["file"]["tmp_name"];
+// }
+else {
 
 try {
-    // You may need to change the region. It will say in the URL when the bucket is open
-    // and on creation.
     $s3 = S3Client::factory(
     array(
     'credentials' => array(
@@ -40,17 +44,13 @@ try {
         )
     );
 } catch (Exception $e) {
-    // We use a die, so if this fails. It stops here. Typically this is a REST call so this would
-    // return a json object.
     die("Error: " . $e->getMessage());
 }
 
-// For this, I would generate a unqiue random string for the key name. But you can do whatever.
 $keyName = 'key/' . basename($_FILES['file']['tmp_name']);
 $pathInS3 = 'https://s3.ap-southeast-2.amazonaws.com/' . $bucketName . '/' . $keyName;
 
 try {
-    // Uploaded:
     $file = $_FILES['file']['tmp_name'];
     $s3->putObject(
         array(
@@ -64,6 +64,7 @@ try {
     die('Error:' . $e->getMessage());
 } catch (Exception $e) {
     die('Error:' . $e->getMessage());
+}
 }
 }
 ?>
@@ -119,13 +120,20 @@ try {
         <p class="lead">Ryan Cassidy & Vineet Bugtani</p>
         <ul class="list-unstyled">
           <li>Please select a csv coordinates file</li>
-          <form action="index.php" method="post"
+          <form action="index.php" id="fileform" method="post"
 	enctype="multipart/form-data">
 <label for="file">Filename:</label>
-<input type="file" name="file" id="file" /> 
+<input type="file" name="filesel" id="filesel" accept=".txt, .csv" /> 
 <br />
 <input type="submit" name="submit" value="Submit" />
 </form>
+<script>
+document.getElementById("fileform").onsubmit = function () {
+    if (!document.getElementById("filesel").value) {
+        return false;
+    }
+}
+</script>
         </ul>
       </div>
     </div>
