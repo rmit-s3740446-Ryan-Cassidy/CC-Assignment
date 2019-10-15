@@ -11,25 +11,14 @@ $bucketName = 'ccptvapp';
 $IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
 $IAM_SECRET = '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';
 $allowed_ext = array('txt', 'csv');
+$_SESSION['success'] = false;
+$_SESSION['filename'] = '';
 if (isset($_POST["submit"])) {
-    $file = $_FILES['filesel']['name'];
+    $file = $_FILES['filesel']['tmp_name'];
     $fileinfo = pathinfo($file);
     if (!in_array($fileinfo['extension'], $allowed_ext)){
         echo '<script type="text/javascript">alert("Invalid file selected")</script>';
     }
-    
-   
-// if ($_FILES["file"]["error"] > 0)
-// {
-//     echo "Error: " . $_FILES["file"]["error"] . "<br />";
-// }
-// else
-// {
-//     echo "Upload: " . $_FILES["file"]["name"] . "<br />";
-//     echo "Type: " . $_FILES["file"]["type"] . "<br />";
-//     echo "Size: " . ($_FILES["file"]["size"] / 1024) . " Kb<br />";
-//     echo "Stored in: " . $_FILES["file"]["tmp_name"];
-// }
 else {
 
 try {
@@ -60,6 +49,8 @@ try {
             'StorageClass' => 'REDUCED_REDUNDANCY'
         )
         );
+    $_SESSION['filename'] = $_FILES['filesel']['tmp_name'];
+    $_SESSION['success'] = true;
 } catch (S3Exception $e) {
     die('Error:' . $e->getMessage());
 } catch (Exception $e) {
@@ -102,7 +93,7 @@ try {
             <a class="nav-link" href="sample.php">Sample</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="map.php">Contact</a>
           </li>
         </ul>
       </div>
