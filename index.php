@@ -99,6 +99,7 @@ try {
           <li>Please select a csv coordinates file</li>
           <form action="index.php" id="fileform" method="post"
 	enctype="multipart/form-data">
+<label for="file">Filename:</label>
 <input type="file" name="filesel" id="filesel" accept=".txt, .csv" /> 
 <br />
 <input type="submit" name="submit" value="Submit" />
