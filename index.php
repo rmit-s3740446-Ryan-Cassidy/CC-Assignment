@@ -48,7 +48,7 @@ try {
             'StorageClass' => 'REDUCED_REDUNDANCY'
         )
         );
-    $_SESSION['filename'] = $_FILES['filesel']['tmp_name'];
+    $_SESSION['filename'] = $_FILES['filesel']['name'];
     $_SESSION['success'] = true;
     header("Location: map.php");
 } catch (S3Exception $e) {
