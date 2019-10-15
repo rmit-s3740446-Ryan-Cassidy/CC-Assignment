@@ -82,7 +82,7 @@ var subject = "Cloud Computing - Map";
 //Email Body
 var body_text = `Amazon Pinpoint Email
 ----------------------------------------------------
-This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript.;
+This email was sent with Amazon Pinpoint using the AWS SDK for JavaScript.`;
 //Image
 var myDiv = document.getElementById("images").innerHTML;
 // Message Tags
