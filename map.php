@@ -92,7 +92,7 @@ var tag1 = { 'Name':'key1', 'Value':'value1' };
 var charset = "UTF-8";
 
 //AWS Creds
-AWS.config.credentials = new AWS.Credentials('AKIAWF2GCE4OTQ77KZDT', 'Dt1o3ROc6db6bZSbleufErXUVh8xU9vYUTIx4ulm');
+AWS.config.credentials = new AWS.Credentials('YOUR IAM KEY HERE', 'YOUR IAM SECRET HERE');
 //Update region
 AWS.config.update({region:aws_region});
 //Create a new PinpointEmail object.
@@ -149,10 +149,10 @@ var params = {
 
     //Mapbox Tilelayer
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	id: 'mapbox.streets',
-	accessToken: 'pk.eyJ1IjoiaGVyYXN5IiwiYSI6ImNrMWcwbG9xNzB6azUzbW1tZ3drbTdxc2YifQ.IDi32Sz2mSNS1VlrvL21pQ'
+	accessToken: 'YOUR MAPBOX KEY HERE'
 }).addTo(map);
 
     //Coordinates Polyline
