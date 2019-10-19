@@ -1,0 +1,4 @@
+CREATE TABLE `coords` (
+  `lat` varchar(20) DEFAULT NULL,
+  `lon` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
