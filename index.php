@@ -9,8 +9,8 @@ require 'vendor/autoload.php';
 use Aws\S3\S3Client;
 use Aws\S3\Exception\S3Exception;
 $bucketName = 'ccptvapp';
-$IAM_KEY = 'AKIAWF2GCE4OTQ77KZDT';
-$IAM_SECRET = 'Dt1o3ROc6db6bZSbleufErXUVh8xU9vYUTIx4ulm';
+$IAM_KEY = 'YOUR IAM KEY HERE';
+$IAM_SECRET = 'YOUR SECRET HERE';
 $allowed_ext = array('txt', 'csv');
 if (isset($_POST["submit"])) {
     $file = $_FILES['filesel']['name'];
